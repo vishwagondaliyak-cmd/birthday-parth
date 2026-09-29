@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>For Parth 🎂</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="fx"></canvas>
+<div id="bg"></div>
+<main>
+
+<!-- PART 1: GATE -->
+<section class="screen card active" id="s-gate">
+  <p class="tag">🔐 PRIVATE FRIENDSHIP FILE</p>
+  <p class="sub">ACCESS RESTRICTED.</p>
+  <p>Before entering, we need to confirm something…</p>
+  <h1>Are you actually Parth?</h1>
+  <button class="btn" id="yes">YES, OBVIOUSLY 🙄</button>
+  <p class="load hide" id="loadline"></p>
+  <div id="confirmed" class="hide">
+    <h2>Identity confirmed.</h2>
+    <p>Unfortunately, you really are Parth. 😂</p>
+    <button class="btn" data-go="s-q1">Continue →</button>
+  </div>
+</section>
+
+<!-- PARTS 2-4: QUIZZES (the button with data-correct is the right answer) -->
+<section class="screen card quiz" id="s-q1" data-ok="✓ CORRECT|Wow. You actually know yourself." data-bad="❌ WRONG|Be serious, Parth. We both know the answer.">
+  <p class="tag">SECURITY CHECK 01</p>
+  <h2>What is your most important qualification?</h2>
+  <button class="opt">A. Being normal</button>
+  <button class="opt" data-correct>B. Being irritating</button>
+  <button class="opt">C. Being responsible</button>
+  <div class="fb"></div>
+  <button class="btn hide" data-go="s-q2">Next →</button>
+</section>
+
+<section class="screen card quiz" id="s-q2" data-ok="✓ CORRECT|Unfortunately, the chaos has been confirmed." data-bad="❌ Are you sure?|Think about your own track record. 😂">
+  <p class="tag">SECURITY CHECK 02</p>
+  <h2>What happens when Parth enters someone's life?</h2>
+  <button class="opt">A. Everything becomes peaceful.</button>
+  <button class="opt">B. Nothing changes.</button>
+  <button class="opt" data-correct>C. Chaos begins.</button>
+  <div class="fb"></div>
+  <button class="btn hide" data-go="s-q3">Next →</button>
+</section>
+
+<section class="screen card quiz" id="s-q3" data-ok="✓ FINAL CHECK PASSED|Okay. That's enough evidence." data-bad="❌ WRONG|Be serious, Parth. We both know the answer.">
+  <p class="tag">FINAL SECURITY CHECK</p>
+  <h2>What is Parth's biggest talent?</h2>
+  <button class="opt">A. Being quiet</button>
+  <button class="opt" data-correct>B. Annoying people</button>
+  <button class="opt">C. Staying serious</button>
+  <div class="fb"></div>
+  <button class="btn hide" data-go="s-unlock">UNLOCK THE FILE 🔓</button>
+</section>
+
+<!-- PART 5: UNLOCK -->
+<section class="screen card dark" id="s-unlock">
+  <div class="lock" id="lock">🔒</div>
+  <h2 id="ulines">VERIFYING…</h2>
+</section>
+
+<!-- PART 6: REVEAL -->
+<section class="screen card" id="s-reveal">
+  <h2 id="rv-line" class="big">HEY PARTH 👀</h2>
+  <div id="rv-main" class="hide">
+    <div class="balloons"><i></i><i></i><i></i></div>
+    <h1>HAPPY BIRTHDAY, PARTH! 🥳🎂</h1>
+    <p>Congratulations on surviving another year of being extremely irritating.</p>
+    <div class="cake"><b class="flame"></b><span class="l1"></span><span class="l2"></span><span class="l3"></span></div>
+    <button class="btn" data-go="s-story">Continue →</button>
+  </div>
+</section>
+
+<!-- PART 7: STORY -->
+<section class="screen" id="s-story">
+  <h2 class="center">Okay, let's talk about how this happened…</h2>
+  <div class="timeline">
+    <div class="tl reveal"><h3>1st Year 🎓</h3><p>Same college. Same surroundings. But somehow we didn't properly know each other yet.</p></div>
+    <div class="tl reveal"><h3>2nd Year 👀</h3><p>And then somehow… we actually started knowing each other.</p></div>
+    <div class="tl reveal"><h3>The Chaos Begins 😂</h3><p>After that, there was no escaping you.</p></div>
+    <div class="tl reveal"><h3>The Random Era</h3><p>Somewhere between random conversations, teasing, arguments and stupid moments…</p></div>
+    <div class="tl reveal"><h3>Now 🤍</h3><p>You became one of the best parts of my college life.</p></div>
+  </div>
+  <button class="btn" data-go="s-report">Continue →</button>
+</section>
+
+<!-- PART 8: REPORT -->
+<section class="screen card" id="s-report">
+  <h2>📋 OFFICIAL PARTH REPORT</h2>
+  <div class="row reveal"><span>Annoying Me</span><em>100%</em><div class="bar"><i data-v="100"></i></div></div>
+  <div class="row reveal"><span>Irritation Level</span><em>100%</em><div class="bar"><i data-v="100"></i></div></div>
+  <div class="row reveal"><span>Randomness</span><em>95%</em><div class="bar"><i data-v="95"></i></div></div>
+  <div class="row reveal"><span>Making Me Laugh</span><em>90%</em><div class="bar"><i data-v="90"></i></div></div>
+  <div class="row reveal"><span>Creating Chaos</span><em>100%</em><div class="bar"><i data-v="100"></i></div></div>
+  <div class="row reveal"><span>Being A Good Friend</span><em>100%</em><div class="bar"><i data-v="100"></i></div></div>
+  <div class="row reveal"><span>Importance</span><em>100%</em><div class="bar"><i data-v="100"></i></div></div>
+  <p class="tag">FINAL RESULT</p>
+  <h2>Unfortunately… IRREPLACEABLE.</h2>
+  <p class="small">Complaint department is permanently closed because there are too many complaints.</p>
+  <button class="btn" data-go="s-secrets">Continue →</button>
+</section>
+
+<!-- PART 9: SECRETS -->
+<section class="screen card" id="s-secrets">
+  <h2>Things I don't usually say 👀</h2>
+  <p class="tag" id="counter">Secrets unlocked: 0/6</p>
+  <div class="cards">
+    <div class="flip"><div class="in"><div class="front">Don't open this.</div><div class="back">Okay fine… you're actually important to me.</div></div></div>
+    <div class="flip"><div class="in"><div class="front">Don't open this.</div><div class="back">You irritate me more than almost anyone.</div></div></div>
+    <div class="flip"><div class="in"><div class="front">Don't open this.</div><div class="back">But somehow I still want you around.</div></div></div>
+    <div class="flip"><div class="in"><div class="front">Don't open this.</div><div class="back">College wouldn't have been the same without you.</div></div></div>
+    <div class="flip"><div class="in"><div class="front">Don't open this.</div><div class="back">Thank you for all the random memories.</div></div></div>
+    <div class="flip"><div class="in"><div class="front">Don't open this.</div><div class="back">Don't get emotional. You're still irritating. 😂</div></div></div>
+  </div>
+  <div id="allsecrets" class="hide">
+    <p><b>Okay… you found all of them.</b></p>
+    <p>Please forget everything you just read. 😂</p>
+    <button class="btn" data-go="s-quiz">Continue →</button>
+  </div>
+</section>
+
+<!-- PARTS 10-11: INTERROGATION + FAKE EXIT -->
+<section class="screen card" id="s-quiz">
+  <p class="tag">IMPORTANT QUESTION</p>
+  <h2>Who is the most irritating person you know?</h2>
+  <div id="whoopts">
+    <button class="opt">Parth</button>
+    <button class="opt">Obviously Parth</button>
+    <button class="opt">Why are you even asking?</button>
+  </div>
+  <div id="whores" class="hide">
+    <h2>CORRECT 😂</h2>
+    <p>You know him too well.</p>
+    <p class="pts">+<span id="pts">0</span> Friendship Points</p>
+    <button class="btn" id="done">Okay, I'm done →</button>
+  </div>
+</section>
+
+<!-- PART 12-13: GIFT -->
+<section class="screen card" id="s-gift">
+  <p class="tag" id="gifttag">ONE LAST THING FOR YOU.</p>
+  <div class="gift" id="gift"><div class="lid"></div><div class="box"></div></div>
+  <button class="btn" id="open">OPEN IT 🎁</button>
+  <div id="msgwrap" class="hide">
+    <p id="msg"></p>
+    <p class="sign hide" id="sign">— From someone who somehow still puts up with you 😂</p>
+    <button class="btn hide" id="restart">RESTART THE CHAOS 🔄</button>
+  </div>
+</section>
+
+</main>
+
+<!-- Fake exit popup -->
+<div id="modal" class="hide"><div class="card"><h2 id="m-title"></h2><p id="m-text"></p><button class="btn" id="m-btn"></button></div></div>
+
+<script src="script.js"></script>
+</body>
+</html>
